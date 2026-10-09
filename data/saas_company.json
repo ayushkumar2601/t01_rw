@@ -1,0 +1,29 @@
+{
+  "company": {
+    "name": "FlowPilot",
+    "description": "Workflow automation SaaS for B2B service teams",
+    "stage": "early_growth",
+    "business_model": "B2B SaaS",
+    "target_market": "SMB and mid-market",
+    "primary_icp": "Operations leaders at 20-200 person companies",
+    "average_contract_value_usd": 2400
+  },
+  "metrics": {
+    "mrr_usd": 18000,
+    "monthly_churn_rate_pct": 8.5,
+    "monthly_website_visitors": 4500,
+    "monthly_inbound_leads": 35,
+    "lead_to_customer_conversion_pct": 2.0,
+    "customer_acquisition_cost_usd": 900,
+    "monthly_marketing_budget_usd": 3000,
+    "net_revenue_retention_pct": 88
+  },
+  "constraints": {
+    "team_size": 3,
+    "engineering_capacity": "limited",
+    "sales_capacity": "founder_led",
+    "implementation_window_days": 30,
+    "existing_channels": ["organic_search", "linkedin"],
+    "excluded_channels": ["large_paid_advertising_campaigns"]
+  }
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "input": {
+      "company": {
+        "name": "SampleSaaS",
+        "description": "Fictional tool",
+        "stage": "early_growth",
+        "business_model": "B2B SaaS",
+        "target_market": "SMB",
+        "primary_icp": "Operations",
+        "average_contract_value_usd": 1000
+      },
+      "metrics": {
+        "mrr_usd": 10000,
+        "monthly_churn_rate_pct": 12.0,
+        "monthly_website_visitors": 1000,
+        "monthly_inbound_leads": 10,
+        "lead_to_customer_conversion_pct": 1.0,
+        "customer_acquisition_cost_usd": 500,
+        "monthly_marketing_budget_usd": 1000,
+        "net_revenue_retention_pct": 80
+      },
+      "constraints": {
+        "team_size": 2,
+        "engineering_capacity": "none",
+        "sales_capacity": "founder_led",
+        "implementation_window_days": 30,
+        "existing_channels": [],
+        "excluded_channels": []
+      }
+    },
+    "output": {
+      "executive_summary": {
+        "company_name": "SampleSaaS",
+        "primary_bottleneck": "High Churn",
+        "key_findings": ["Churn is at 12%"],
+        "strategic_thesis": "Focus on retention",
+        "primary_30_day_objective": "Reduce churn",
+        "assumptions": ["Customer success can handle outreach"]
+      },
+      "prioritized_growth_channels": [
+        {
+          "rank": 1,
+          "channel": "Lifecycle Emails",
+          "priority_score": 85,
+          "rationale": "High churn needs immediate retention efforts",
+          "supporting_evidence": ["12% churn is unsustainable"],
+          "system_to_build": "Automated onboarding sequence",
+          "leading_kpi": "Activation rate",
+          "target": "30%",
+          "budget_usd": 100,
+          "time_to_signal_days": 14,
+          "risks": ["Low open rates"],
+          "score_impact": 100,
+          "score_fit": 90,
+          "score_feasibility": 80,
+          "score_learning_speed": 70,
+          "score_cost_efficiency": 45
+        },
+        {
+          "rank": 2,
+          "channel": "In-app Prompts",
+          "priority_score": 75,
+          "rationale": "Guides users",
+          "supporting_evidence": ["Users get lost"],
+          "system_to_build": "Tooltips",
+          "leading_kpi": "Feature usage",
+          "target": "50%",
+          "budget_usd": 50,
+          "time_to_signal_days": 7,
+          "risks": ["Annoying to users"],
+          "score_impact": 80,
+          "score_fit": 80,
+          "score_feasibility": 80,
+          "score_learning_speed": 70,
+          "score_cost_efficiency": 40
+        },
+        {
+          "rank": 3,
+          "channel": "Customer Success Outreach",
+          "priority_score": 65,
+          "rationale": "Personal touch",
+          "supporting_evidence": ["High value customers leaving"],
+          "system_to_build": "Quarterly check-ins",
+          "leading_kpi": "Calls booked",
+          "target": "10 per week",
+          "budget_usd": 0,
+          "time_to_signal_days": 21,
+          "risks": ["Time consuming"],
+          "score_impact": 70,
+          "score_fit": 70,
+          "score_feasibility": 60,
+          "score_learning_speed": 60,
+          "score_cost_efficiency": 50
+        }
+      ],
+      "action_plan_30_days": [
+        {
+          "week": 1,
+          "theme": "Diagnosis",
+          "objective": "Identify drop-off",
+          "actions": [
+            {
+              "task": "Analyze data",
+              "owner": "Founder",
+              "due_day": 5,
+              "success_metric": "Report generated",
+              "deliverable": "PDF Report"
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "theme": "Setup",
+          "objective": "Setup tools",
+          "actions": [
+            {
+              "task": "Install tracking",
+              "owner": "Engineer",
+              "due_day": 10,
+              "success_metric": "Events firing",
+              "deliverable": "Dashboard"
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "theme": "Launch",
+          "objective": "Launch campaigns",
+          "actions": [
+            {
+              "task": "Send emails",
+              "owner": "Marketer",
+              "due_day": 18,
+              "success_metric": "Emails sent",
+              "deliverable": "Campaign live"
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "theme": "Review",
+          "objective": "Review results",
+          "actions": [
+            {
+              "task": "Review metrics",
+              "owner": "Founder",
+              "due_day": 28,
+              "success_metric": "Review meeting held",
+              "deliverable": "Meeting notes"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
