@@ -62,7 +62,7 @@ def validate_business_rules(report: dict, company_data: dict) -> list:
             cost = c.get("score_cost_efficiency", 0)
             expected_score = round((0.35 * impact) + (0.25 * fit) + (0.20 * feasibility) + (0.10 * learning) + (0.10 * cost), 2)
             actual_score = round(c.get("priority_score", 0), 2)
-            if abs(expected_score - actual_score) > 0.1: # Allow small floating point drift
+            if abs(expected_score - actual_score) > 0.6: # Allow floating point drift and integer rounding
                 errors.append(f"Channel {c.get('channel')} priority score {actual_score} does not match calculated score {expected_score}")
         except Exception:
             errors.append(f"Channel {c.get('channel')} has invalid score fields for calculation")

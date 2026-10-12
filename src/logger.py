@@ -45,5 +45,7 @@ def log_execution(
         f.write(json.dumps(record) + "\n")
     if status == "success":
         logger.info(f"Run {run_id} completed successfully.")
+    elif status == "validation_failed":
+        logger.warning(f"Run {run_id} validation failed: {error_type}. Attempting corrective recovery...")
     else:
         logger.error(f"Run {run_id} failed: {error_type}")

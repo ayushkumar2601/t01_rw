@@ -41,7 +41,7 @@ def run_generation(messages, company_data, input_hash):
             validation_errors=validation_errors,
             error_type="validation_error"
         )
-        return False, validation_errors, messages, latency
+        return False, validation_errors, report, latency
         
     return True, report, result, latency
 
@@ -72,33 +72,48 @@ def main():
         print(json.dumps(messages, indent=2))
         sys.exit(0)
 
-    success, result_data, api_result, latency = run_generation(messages, company_data, input_hash)
+    success, result_data, report_or_result, latency = run_generation(messages, company_data, input_hash)
     
     if not success:
         print("Validation failed, attempting corrective generation...", file=sys.stderr)
         validation_errors = result_data
+        previous_report = report_or_result
         
+        # 1. Append previous assistant response so model sees what it output
+        messages.append({
+            "role": "assistant",
+            "content": json.dumps(previous_report)
+        })
+        
+        # 2. Append explicit corrective user prompt
+        error_items = "\n".join(f"- {err}" for err in validation_errors)
         corrective_msg = {
             "role": "user",
-            "content": "Your previous response failed validation with the following errors:\n" + 
-                       "\n".join(validation_errors) + 
-                       "\nPlease provide a corrected, complete JSON object."
+            "content": (
+                f"Your previous response failed validation with the following specific errors:\n{error_items}\n\n"
+                "Please fix these specific errors and provide the corrected, complete JSON object.\n"
+                "For priority_score:\n"
+                "Each channel's priority_score MUST equal the exact calculated score:\n"
+                "round((0.35 * score_impact) + (0.25 * score_fit) + (0.20 * score_feasibility) + (0.10 * score_learning_speed) + (0.10 * score_cost_efficiency), 2).\n"
+                "Update each channel's priority_score to match this calculated value exactly."
+            )
         }
         
         messages.append(corrective_msg)
         
-        success2, result_data2, api_result2, latency2 = run_generation(messages, company_data, input_hash)
+        success2, result_data2, report_or_result2, latency2 = run_generation(messages, company_data, input_hash)
         if not success2:
             print("Corrective generation failed validation:", file=sys.stderr)
             for err in result_data2:
                 print(f" - {err}", file=sys.stderr)
             sys.exit(1)
         
-        result_data = result_data2
-        api_result = api_result2
+        report = result_data2
+        api_result = report_or_result2
         latency += latency2
-
-    report = result_data
+    else:
+        report = result_data
+        api_result = report_or_result
 
     try:
         with open(args.output, "w") as f:
