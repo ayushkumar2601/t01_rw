@@ -6,5 +6,6 @@ __pycache__/
 logs/*.jsonl
 logs/*.log
 outputs/*.json
+!outputs/sample_report.json
 !outputs/.gitkeep
 !logs/.gitkeep
