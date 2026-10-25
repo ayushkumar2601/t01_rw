@@ -159,9 +159,15 @@ def run_pipeline(input_path: Path, output_path: Path, print_prompt: bool = False
     print("📊 Executive Summary Snapshot:")
     print(f"   Bottleneck: {report.get('executive_summary', {}).get('primary_bottleneck')}")
     print(f"   Thesis:     {report.get('executive_summary', {}).get('strategic_thesis')}")
-    print("   Prioritized Growth Channels:")
+    print(f"   Prioritized Growth Channels:")
     for ch in report.get("prioritized_growth_channels", []):
         print(f"     #{ch.get('rank')} {ch.get('channel')} (Score: {ch.get('priority_score')}, Budget: ${ch.get('budget_usd')})")
+    print("-" * 70)
+    print("📅 30-Day 'Systems, Not Campaigns' Action Plan:")
+    for phase in report.get("action_plan_30_days", []):
+        print(f"   Week {phase.get('week')} ({phase.get('theme')}): {phase.get('objective')}")
+        for action in phase.get("actions", []):
+            print(f"     • [Day {action.get('due_day')}] {action.get('task')} (Owner: {action.get('owner')}) -> {action.get('deliverable')}")
     print("=" * 70)
 
 

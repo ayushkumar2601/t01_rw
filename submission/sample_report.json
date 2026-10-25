@@ -3,196 +3,203 @@
     "company_name": "FlowPilot",
     "primary_bottleneck": "High monthly churn (8.5%) and low net revenue retention (88%)",
     "key_findings": [
-      "Churn at 8.5% exceeds healthy benchmark",
-      "Net revenue retention at 88% indicates revenue leakage",
-      "Visitor-to-lead conversion is only 0.78%"
+      "Visitor-to-lead conversion is 0.78% (35/4500)",
+      "Lead-to-customer conversion is 2%",
+      "CAC ($900) payback ~4.5 months",
+      "Churn erodes growth faster than acquisition"
     ],
-    "strategic_thesis": "Implement repeatable, low\u2011code retention systems to activate at\u2011risk users and curb churn before expanding acquisition spend",
-    "primary_30_day_objective": "Reduce monthly churn from 8.5% to \u22646.5% and lift activation rate to 30% through automated nurture, in\u2011app prompts, and a referral loop",
+    "strategic_thesis": "Deploy repeatable retention and activation systems to curb churn while using founder\u2011led LinkedIn outreach for steady acquisition",
+    "primary_30_day_objective": "Reduce monthly churn by 2 percentage points and increase activation rate of new users by 20%",
     "assumptions": [
-      "Team of 3 can adopt no\u2011code tools (email automation, in\u2011app config)",
-      "Founder can lead customer\u2011success outreach",
-      "Limited engineering means solutions must use existing product configuration"
+      "Founder can lead outbound LinkedIn efforts",
+      "No\u2011code email and in\u2011app tools are available",
+      "Team of 3 can execute without dedicated engineers"
     ]
   },
   "prioritized_growth_channels": [
     {
       "rank": 1,
-      "channel": "Automated Customer Nurture Email Sequence",
-      "priority_score": 87.0,
-      "rationale": "Directly addresses churn by educating and re\u2011engaging users during the first weeks of the product experience",
+      "channel": "Lifecycle Email Automation",
+      "priority_score": 86,
+      "rationale": "Directly tackles churn by nurturing new and at\u2011risk customers through automated email sequences",
       "supporting_evidence": [
-        "Monthly churn 8.5%",
-        "Net revenue retention 88%",
-        "Low activation historically (<30%)"
+        "Monthly churn is 8.5%",
+        "Email tools require minimal engineering"
       ],
-      "system_to_build": "Trigger\u2011based email workflow (welcome, feature highlights, usage tips) using a no\u2011code platform",
-      "leading_kpi": "Email activation rate (users who perform a core action after receiving email)",
-      "target": "30% activation within 14 days of onboarding",
-      "budget_usd": 600,
-      "time_to_signal_days": 14,
+      "system_to_build": "Automated multi\u2011step onboarding and re\u2011engagement email flow triggered by activation events",
+      "leading_kpi": "Email open rate for at\u2011risk cohort",
+      "target": "30% open rate within 7 days of send",
+      "budget_usd": 400,
+      "time_to_signal_days": 7,
       "risks": [
-        "Low open or click\u2011through rates",
-        "Content relevance mis\u2011alignment"
+        "Low open/click rates may limit impact",
+        "Content creation load on founder"
       ],
       "score_impact": 100,
       "score_fit": 80,
       "score_feasibility": 80,
       "score_learning_speed": 80,
-      "score_cost_efficiency": 80
+      "score_cost_efficiency": 70
     },
     {
       "rank": 2,
-      "channel": "Referral Incentive Program",
-      "priority_score": 72.5,
-      "rationale": "Leverages satisfied customers to generate warm leads and reinforces commitment, indirectly reducing churn",
+      "channel": "LinkedIn Founder\u2011Led Outreach",
+      "priority_score": 80,
+      "rationale": "Leverages existing LinkedIn presence and founder credibility to acquire warm prospects without paid ads",
       "supporting_evidence": [
-        "High churn indicates need for stronger customer advocacy",
-        "Existing organic channels (LinkedIn, search) provide traffic base"
+        "Existing channel list includes LinkedIn",
+        "Founder leads sales"
       ],
-      "system_to_build": "Automated referral portal with reward tracking integrated via a no\u2011code referral app",
-      "leading_kpi": "Number of referral sign\u2011ups per week",
-      "target": "\u226510 new referrals weekly",
-      "budget_usd": 400,
-      "time_to_signal_days": 21,
+      "system_to_build": "Standardized LinkedIn connection request and message cadence with tracking spreadsheet",
+      "leading_kpi": "Positive reply rate from outreach messages",
+      "target": "10 qualified replies within 14 days",
+      "budget_usd": 0,
+      "time_to_signal_days": 7,
       "risks": [
-        "Referral rewards cost outweigh acquisition value",
-        "Low participation without clear incentives"
+        "Founder time constraints",
+        "Message fatigue"
       ],
       "score_impact": 70,
-      "score_fit": 80,
-      "score_feasibility": 70,
-      "score_learning_speed": 60,
-      "score_cost_efficiency": 80
+      "score_fit": 90,
+      "score_feasibility": 80,
+      "score_learning_speed": 80,
+      "score_cost_efficiency": 90
     },
     {
       "rank": 3,
-      "channel": "In\u2011App Usage Nudges (Tooltips)",
-      "priority_score": 71.5,
-      "rationale": "Guides users to high\u2011value features, improving product stickiness and lowering churn risk",
+      "channel": "In\u2011app Guided Prompts",
+      "priority_score": 75,
+      "rationale": "Provides contextual nudges to increase feature adoption and reduce churn without heavy engineering",
       "supporting_evidence": [
-        "Churn spikes after initial 2\u2011week period",
-        "Product has configurable tooltip engine"
+        "Churn is driven by low product usage",
+        "Limited engineering capacity favors no\u2011code in\u2011app tools"
       ],
-      "system_to_build": "Rule\u2011based tooltip triggers that surface contextual tips for key workflows",
-      "leading_kpi": "Feature adoption rate (users who complete target action)",
-      "target": "50% of active users adopt core feature within 7 days of prompt",
+      "system_to_build": "No\u2011code in\u2011app messaging tool (e.g., Intercom) configured with usage\u2011based tooltips",
+      "leading_kpi": "Feature activation rate among new users",
+      "target": "Increase activation from 40% to 60% in 30 days",
       "budget_usd": 300,
-      "time_to_signal_days": 7,
+      "time_to_signal_days": 5,
       "risks": [
-        "Over\u2011messaging may annoy users",
-        "Tooltips require accurate timing configuration"
+        "Potential user annoyance",
+        "Integration limits with current product"
       ],
       "score_impact": 80,
-      "score_fit": 70,
-      "score_feasibility": 60,
+      "score_fit": 80,
+      "score_feasibility": 70,
       "score_learning_speed": 70,
-      "score_cost_efficiency": 70
+      "score_cost_efficiency": 60
     }
   ],
   "action_plan_30_days": [
     {
       "week": 1,
-      "theme": "Diagnosis & Instrumentation",
-      "objective": "Map churn drivers and establish tracking",
+      "theme": "Audit & Instrumentation",
+      "objective": "Identify churn drivers and instrument tracking",
       "actions": [
         {
-          "task": "Conduct churn cohort analysis and identify high\u2011risk segments",
+          "task": "Conduct 5 churn customer interviews",
           "owner": "Founder",
-          "due_day": 4,
-          "success_metric": "High\u2011risk segment list completed",
-          "deliverable": "Spreadsheet of at\u2011risk accounts"
+          "due_day": 5,
+          "success_metric": "5 interview transcripts completed",
+          "deliverable": "Churn insights report"
         },
         {
-          "task": "Implement product usage event tracking for key features",
-          "owner": "Growth Lead",
+          "task": "Set up email and in\u2011app event tracking",
+          "owner": "Growth Manager",
           "due_day": 6,
-          "success_metric": "All events visible in analytics dashboard",
-          "deliverable": "Configured analytics dashboard"
+          "success_metric": "Events firing in dashboard",
+          "deliverable": "Analytics dashboard link"
         }
       ]
     },
     {
       "week": 2,
-      "theme": "System Build & Collateral",
-      "objective": "Create the repeatable retention systems",
+      "theme": "System Build",
+      "objective": "Create repeatable retention and outreach systems",
       "actions": [
         {
-          "task": "Design and build email nurture workflow in Mailchimp",
-          "owner": "Growth Lead",
-          "due_day": 11,
-          "success_metric": "Workflow active for pilot segment",
-          "deliverable": "Email sequence template"
-        },
-        {
-          "task": "Configure in\u2011app tooltip triggers for core workflow",
-          "owner": "Founder",
+          "task": "Design and build 4\u2011step email nurture flow",
+          "owner": "Growth Manager",
           "due_day": 12,
-          "success_metric": "Tooltips live for beta users",
-          "deliverable": "Tooltip configuration file"
+          "success_metric": "Flow live for new and at\u2011risk users",
+          "deliverable": "Email automation workspace"
         },
         {
-          "task": "Develop referral program landing page and reward structure",
-          "owner": "Growth Lead",
+          "task": "Draft LinkedIn outreach script and target list",
+          "owner": "Founder",
           "due_day": 13,
-          "success_metric": "Referral page published and linked in email footer",
-          "deliverable": "Referral landing page URL"
+          "success_metric": "Script approved and 30 accounts identified",
+          "deliverable": "Outreach playbook document"
+        },
+        {
+          "task": "Configure in\u2011app tooltip triggers for key features",
+          "owner": "Customer Success Lead",
+          "due_day": 14,
+          "success_metric": "Prompts active for 100% of active users",
+          "deliverable": "In\u2011app prompt configuration file"
         }
       ]
     },
     {
       "week": 3,
-      "theme": "Launch & Early Signal Collection",
-      "objective": "Deploy systems to target users and gather leading metrics",
+      "theme": "Launch & Signal Detection",
+      "objective": "Deploy systems and collect early signals",
       "actions": [
         {
-          "task": "Launch email nurture to 20% of new sign\u2011ups",
-          "owner": "Growth Lead",
-          "due_day": 18,
-          "success_metric": "Email open rate \u226520%",
-          "deliverable": "Campaign performance report"
+          "task": "Activate email nurture for new sign\u2011ups and at\u2011risk segment",
+          "owner": "Growth Manager",
+          "due_day": 17,
+          "success_metric": "Emails sent to 100% of target cohort",
+          "deliverable": "Email send log"
         },
         {
-          "task": "Activate in\u2011app nudges for all new users",
+          "task": "Send LinkedIn connection requests and first messages to 30 targets",
           "owner": "Founder",
-          "due_day": 19,
-          "success_metric": "Prompt click\u2011through rate \u226510%",
-          "deliverable": "Nudge performance dashboard"
+          "due_day": 18,
+          "success_metric": "30 connection requests sent",
+          "deliverable": "Outreach activity spreadsheet"
         },
         {
-          "task": "Send referral invitation emails to existing customers",
+          "task": "Enable in\u2011app prompts for all active users",
           "owner": "Customer Success Lead",
-          "due_day": 20,
-          "success_metric": "\u22655 new referral sign\u2011ups",
-          "deliverable": "Referral enrollment list"
+          "due_day": 19,
+          "success_metric": "Prompt displayed on user dashboard",
+          "deliverable": "Screenshot of prompt in UI"
         }
       ]
     },
     {
       "week": 4,
-      "theme": "Review, Iterate & Institutionalize",
-      "objective": "Assess impact, refine systems, and document SOPs",
+      "theme": "Review & Iterate",
+      "objective": "Analyze results, iterate, and institutionalize SOPs",
       "actions": [
         {
-          "task": "Analyze churn and activation metrics post\u2011intervention",
+          "task": "Calculate churn rate for cohort and activation metrics",
           "owner": "Founder",
           "due_day": 25,
-          "success_metric": "Churn reduced by \u22651 pp and activation \u226530%",
-          "deliverable": "Churn analysis report"
+          "success_metric": "Churn reduced by \u22651% and activation up 15%",
+          "deliverable": "Performance analysis report"
         },
         {
-          "task": "A/B test email subject lines and iterate sequence based on results",
-          "owner": "Growth Lead",
+          "task": "Review email open/click rates and adjust content",
+          "owner": "Growth Manager",
+          "due_day": 26,
+          "success_metric": "Open rate \u226530% and click\u2011through \u22655%",
+          "deliverable": "Email performance dashboard"
+        },
+        {
+          "task": "Assess LinkedIn reply rate and schedule follow\u2011ups",
+          "owner": "Founder",
           "due_day": 27,
-          "success_metric": "Improved open rate to \u226525%",
-          "deliverable": "Optimized email template"
+          "success_metric": "\u22655 qualified replies",
+          "deliverable": "Reply tracking sheet"
         },
         {
-          "task": "Document SOPs for email, tooltip, and referral systems",
-          "owner": "Customer Success Lead",
+          "task": "Document SOPs for all three systems",
+          "owner": "Growth Manager",
           "due_day": 30,
-          "success_metric": "SOP handbook completed and shared",
-          "deliverable": "Operations handbook PDF"
+          "success_metric": "SOP manual completed and shared",
+          "deliverable": "Growth Operations SOP document"
         }
       ]
     }
